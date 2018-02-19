@@ -1,0 +1,112 @@
+
+<html>
+<head>
+	<title>REVENGG 2018</title>
+	{% load static %}
+	<meta name = "viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta charset="utf-8">
+	<meta name="copyright" content="Copyright Â© 2017 Department Of Visual Media, BITS Pilani">
+	<meta name="author" content="Department Of Visual Media, BITS Pilani">
+	<meta name="google-signin-scope" content="profile email">
+	<meta name="google-signin-client_id" content="873252659214-md1pcn2npkm82mu269plbogbhc7ap7r2.apps.googleusercontent.com">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'quizapi/css/style.css' %}">
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+	<div class = "wrapper">
+		<div class = "form">
+			<div class = "ribbon">REVENGG
+			</div>
+
+			<!-- <div class = "details">Please enter your details
+			</div>
+
+			<div class="col-input">
+        	<input type="text" id="teamleader" name="teamleader" class = "col-text" placeholder="TEAM LEADER">
+      		</div>
+
+      		<div class="col-input">
+        	<input type="text" id="email" name="email" class = "col-text" placeholder="TEAM LEADER EMAIL">
+      		</div>
+
+      		<div class="col-input">
+        	<input type="text" id="number" name="number" class = "col-text" placeholder="PHONE NUMBER">
+      		</div> -->
+
+      		<!-- <div class="begin-button">
+      		<input type="submit" name="begin" value="BEGIN" class="button-style">
+      		</div> -->
+      			<div style="height: 100vh; width: 100vw; display: flex; flex-direction: column; align-items: center; justify-content: center;"><h2>Login with Google:</h2><br><br><div class="g-signin2" data-onsuccess="onSignIn" style = ""></div></div>
+
+      	</div>
+
+
+      	<div class="main">
+      		<div class = "ribbon">REVENGG
+      			<span class = "time"></span>
+      			<span class = "quit">Quit</span>
+      		</div>
+      		<div class = "info-band">
+					<span class = "type" >type 1
+					</span>
+
+					<span class = "question-number">Question 1
+					</span>
+
+			</div>
+					<div class = "legend">
+						<div class = "legend-back" style="display: inline-block; cursor: pointer;">
+							<input type="submit" name="back" value="Back" style="padding: 1vh 2vw; margin-top: 1vh; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px;">
+						</div>
+
+						<div class = "legend-next" style="display: inline-block; cursor: pointer;">
+							<input type="submit" name="next" value="Save and Next" style="padding: 1vh 2vw; margin-top: 1vh; margin-left: 1vw; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px;">
+						</div>
+
+						<div class = "legend-skip" style="display: inline-block; cursor: pointer;">
+							<input type="submit" name="skip" value="Skip" style="padding: 1vh 2vw; margin-top: 1vh; margin-left: 1vw; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px;">
+						</div>
+					</div>
+					<div class = "hamburger">
+
+						<!-- This is used as sample for js code -->
+						<!-- <div class = "ham-type">
+							<span class="ham-type-text">Type1</span>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+						</div> -->
+
+							<!-- <div class = "back"> -->
+							<!-- <img src="img/left.svg" class = "img"> -->
+						<!-- </div> -->
+					</div>
+
+					<form name = "myform" action = "{% url 'quizapi:authenticate' %}" method='POST'>
+						<input id = "temp-input" type="text" name="id_token">
+					</form>
+	</div>
+</body>
+
+<script src = "{% static 'quizapi/js/jquery-3.2.1.min.js' %}"></script>
+<script src = "{% static 'quizapi/js/script.js' %}"></script>
+</html>

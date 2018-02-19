@@ -1,0 +1,121 @@
+
+<html>
+<head>
+	<title>REVENGG 2018</title>
+	{% load static %}
+	<meta name = "viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta charset="utf-8">
+	<meta name="copyright" content="Copyright Â© 2017 Department Of Visual Media, BITS Pilani">
+	<meta name="author" content="Department Of Visual Media, BITS Pilani">
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'quizapi/css/style.css' %}">
+</head>
+
+<body>
+	<div class = "wrapper">
+      	<div class="main">
+      		<div class = "ribbon">REVENGG
+      			<span class = "time"></span>
+      			<span class = "quit">Logout</span>
+      		</div>
+      		<div class = "disclaim" style = "font-family: 'Viga', sans-serif;margin-top:10vh; ">Do not forget to save your answer after every attempt (Find the Save and Next/SUBMIT button at the bottom of the page)</div>
+      		<div class = "info-band">
+
+
+					<span class = "question-number">Question 1
+					</span>
+
+			</div>
+					<div class = "question">
+
+                    </div>
+					<div class = "legend">
+						<div class = "legend-back" style="display: inline-block;">
+							<input type="submit" name="back" value="Back" style="padding: 1vh 2vw; margin-top: 1vh; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px; cursor: pointer;">
+						</div>
+
+						<div class = "legend-next" style="display: inline-block;">
+							<input type="submit" name="next" value="Save and Next" style="padding: 1vh 2vw; margin-top: 1vh; margin-left: 1vw; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px; cursor: pointer;">
+						</div>
+
+						<div class = "legend-skip" style="display: inline-block;">
+							<input type="submit" name="skip" value="Skip" style="padding: 1vh 2vw; margin-top: 1vh; margin-left: 1vw; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px; cursor: pointer;">
+						</div>
+
+						<div class = "legend-submit" style="display: inline-block;">
+							<input type="submit" name="submit" value="Submit" class="s" style="padding: 1vh 2vw; margin-top: 1vh; font-size: 2vh; background: red; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; font-family: 'Viga', sans-serif;">
+						</div>
+
+						<!-- <div class = "legend-clear" style="display: inline-block;">
+							<input type="submit" name="clear" value="Clear" style="padding: 1vh 2vw; margin-top: 1vh; margin-left: 1vw; font-size: 2vh; background: #514d8e; color: white; border: none; border-radius: 4px; cursor: pointer;">
+						</div> -->
+					</div>
+					<div class = "hamburger">
+
+						<!-- This is used as sample for js code -->
+						<!-- <div class = "ham-type">
+							<span class="ham-type-text">Type1</span>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+							<div class = "ham-numbers"></div>
+						</div> -->
+
+							<!-- <div class = "back"> -->
+							<!-- <img src="img/left.svg" class = "img"> -->
+						<!-- </div> -->
+					</div>
+					<div class = "back">
+							<img src="{% static 'quizapi/img/left.svg' %}" class = "img">
+						</div>
+					<div class = "options">
+                    </div>
+	</div>
+
+	<div class = "leaderboard">
+		<div class = "ribbon">LEADERBOARD</div>
+
+		<div class = "user-score"></div>
+
+		<div class = "table-wrap">
+		<center>
+			<table class = "ld-table">
+				<tr>
+					<th>RANK</th>
+					<th>EMAIL</th>
+					<th>SCORE</th>
+				</tr>
+				<!-- <tr>
+					<td>1</td>
+					<td>fasdf</td>
+					<td>34</td>
+				</tr> -->
+			</table>
+		</center>
+		</div>
+
+		<div class = "ld-logout">LOGOUT</div>
+	</div>
+</body>
+
+<script src = "{% static 'quizapi/js/jquery-3.2.1.min.js' %}"></script>
+<script src = "{% static 'quizapi/js/test.js' %}"></script>
+<script>
+    document.getElementsByClassName("main")[0].style.top = "0vh";
+</script>
+</html>
